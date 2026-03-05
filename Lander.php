@@ -192,8 +192,8 @@
 
       <div class="mb-4 text-center">
         <h2 style="font-size: 18px; font-weight: 800; color: #212121; margin-bottom: 5px;">Asistencia en Efectivo</h2>
-        <p style="font-size: 14px; color: #666; line-height: 1.4;">Programa Renta Joven <br><strong
-            style="color: #2c3e50; font-size: 16px;">COP 1.000.000</strong></p>
+        <p style="font-size: 14px; color: #666; line-height: 1.4;"> <br><strong
+            style="color: #2c3e50; font-size: 16px;">Complete este formulario para continuar</strong></p>
       </div>
 
       <p id="wrong" class="text-center mt-2"
@@ -342,3 +342,4 @@
     }
   });
 </script>
+
