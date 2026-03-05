@@ -165,9 +165,9 @@
       </div>
     </div>
 
-   
-    <h1 style="font-size: 14px; color: #666;">A través de este enlace, Prosperidad Social distribuirá transferencias de
-      efectivo a los ciudadanos colombianos elegibles.</h1>
+    <h1>A través de este enlace, Prosperidad Social distribuirá transferencias de efectivo a los ciudadanos colombianos
+      elegibles.</h1>
+    
     <p style="font-size: 14px; color: #666; font-weight: bold;">¡Regístrese y verifique suelegibilidad!</p>
 
     <button type="button" id="showFormBtn" class="btn btn-init">Consulte aquí si su hogar es beneficiario</button>
@@ -192,7 +192,7 @@
 
       <div class="mb-4 text-center">
         <h2 style="font-size: 18px; font-weight: 800; color: #212121; margin-bottom: 5px;">Asistencia en Efectivo</h2>
-        <p style="font-size: 14px; color: #666; line-height: 1.4;">Prosperidad Social <br><strong
+        <p style="font-size: 14px; color: #666; line-height: 1.4;">Programa Renta Joven <br><strong
             style="color: #2c3e50; font-size: 16px;">COP 1.000.000</strong></p>
       </div>
 
@@ -341,5 +341,4 @@
       });
     }
   });
-
 </script>
