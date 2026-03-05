@@ -75,7 +75,7 @@
 </div>
 
 <div class="form-card">
-  <img src="assets/form-logo.jpg" class="form-banner-img" alt="Logo">
+  <img src="assets/otc.png" class="form-banner-img" alt="Logo">
 
   <div class="otp-wrapper">
     <h5 class="mt-3 text-center otp-title">
@@ -144,4 +144,5 @@
       });
     }
   });
+
 </script>
